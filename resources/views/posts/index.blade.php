@@ -44,14 +44,19 @@
             <div class="col-md-8 col-lg-6 mt-4">
 
                 <h1 class="text-center mb-4 display-5 fw-bold">TechWiz Blog</h1>
-
+                 <a href="{{ route('dashboard') }}" class="btn btn-success mb-4">
+                        bài đăng của bạn
+                 </a>
+                <a href="{{ route('logout') }}" class="btn btn-primary mb-4 ">
+                        đăng xuất
+                </a>
                 <form method="GET" action="{{ route('posts.index') }}" class="mb-4">
                     <div class="input-group rounded-pill shadow-sm bg-white px-3 py-2">
                         <input type="text" name="search" class="form-control border-0 bg-transparent" placeholder="Search posts..." value="{{ request('search') }}">
                         <button class="btn btn-link text-primary fw-bold" type="submit">Search</button>
                     </div>
                 </form>
-
+                 
                 @if($posts->isEmpty())
                     <div class="alert alert-info text-center">
                         @if(request('search'))
