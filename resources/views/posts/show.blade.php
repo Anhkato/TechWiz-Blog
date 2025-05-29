@@ -1,5 +1,7 @@
 <x-guest-layout>
-<a href="{{ route('dashboard') }}"> quay lại trang đăng bài</a>
+  <a href="{{ route('posts.index') }}" class="btn btn-success mb-4">
+                        về lại trang bài đăng
+                    </a>
 
     <div class="py-12 bg-gray-100 dark:bg-gray-900">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
@@ -76,7 +78,6 @@
                             </div>
                         @endif
 
-                        {{-- Comment form --}}
                         @auth
                             <form action="{{ route('comments.store', $post) }}" method="POST" class="mt-6">
                                 @csrf

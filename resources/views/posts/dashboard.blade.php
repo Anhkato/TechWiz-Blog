@@ -13,6 +13,7 @@
         <h2 class="fw-semibold fs-5 text-dark">
             Bảng điều khiển Bài viết của tôi
         </h2>
+        
     </x-slot>
 
     <div class="py-5">
@@ -21,6 +22,9 @@
                 <div class="card-body">
                     <a href="{{ route('posts.create') }}" class="btn btn-success mb-4">
                         Tạo bài viết mới
+                    </a>
+                     <a href="{{ route('posts.index') }}" class="btn btn-success mb-4">
+                        về lại trang bài đăng
                     </a>
 
                     {{-- Search Form --}}
